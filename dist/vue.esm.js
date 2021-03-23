@@ -6473,6 +6473,7 @@ function createPatchFunction (backend) {
     }
   }
 
+  /**@desc patch在这儿:  */
   return function patch (oldVnode, vnode, hydrating, removeOnly) {
     if (isUndef(vnode)) {
       if (isDef(oldVnode)) { invokeDestroyHook(oldVnode); }

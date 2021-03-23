@@ -67,6 +67,8 @@ function createKeyToOldIdx (children, beginIdx, endIdx) {
   return map
 }
 
+
+/**@desc create Patch的方法 */
 export function createPatchFunction (backend) {
   let i, j
   const cbs = {}

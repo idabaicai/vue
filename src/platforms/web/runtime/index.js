@@ -31,7 +31,11 @@ extend(Vue.options.directives, platformDirectives)
 extend(Vue.options.components, platformComponents)
 
 // install platform patch function
+
+
+/**@desc 如果在浏览器端，则有patch方法， 否则为空 */
 Vue.prototype.__patch__ = inBrowser ? patch : noop
+
 
 // public mount method
 Vue.prototype.$mount = function (
