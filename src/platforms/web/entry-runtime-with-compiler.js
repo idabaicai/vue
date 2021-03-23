@@ -14,7 +14,9 @@ const idToTemplate = cached(id => {
   return el && el.innerHTML
 })
 
+/**@desc 缓存原型上的 $mount     原型上的 $mount 在 src/platform/web/runtime/index.js */
 const mount = Vue.prototype.$mount
+/**@desc Vue通过 mount 方法挂载 vm    带 compiler 的 $mount 方法在这儿： */
 Vue.prototype.$mount = function (
   el?: string | Element,
   hydrating?: boolean

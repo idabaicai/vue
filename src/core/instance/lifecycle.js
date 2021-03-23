@@ -138,6 +138,7 @@ export function lifecycleMixin (Vue: Class<Component>) {
   }
 }
 
+/**@desc 原型上的 $mount 方法调用这个方法 */
 export function mountComponent (
   vm: Component,
   el: ?Element,
@@ -190,6 +191,8 @@ export function mountComponent (
       vm._update(vm._render(), hydrating)
     }
   }
+  
+  /**@desc 此方法的核心: new Watcher() */
 
   // we set this to vm._watcher inside the watcher's constructor
   // since the watcher's initial patch may call $forceUpdate (e.g. inside child

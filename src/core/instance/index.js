@@ -11,6 +11,7 @@ function Vue (options) {
   ) {
     warn('Vue is a constructor and should be called with the `new` keyword')
   }
+  /**@desc _init 方法在 ./init.js :16 */
   this._init(options)
 }
 
@@ -20,4 +21,5 @@ eventsMixin(Vue)
 lifecycleMixin(Vue)
 renderMixin(Vue)
 
+/**@desc 当我们 new Vue 时。new 的就是这个 Vue：  */
 export default Vue
